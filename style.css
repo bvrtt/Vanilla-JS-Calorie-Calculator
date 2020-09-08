@@ -1,0 +1,679 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  background-color: #d85d0c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+/* Animations */
+.container-active {
+  -webkit-transform: translateX(-43%);
+          transform: translateX(-43%);
+}
+
+.container-active-mobile {
+  -webkit-transform: translateY(-43%);
+          transform: translateY(-43%);
+}
+
+.show-arrow {
+  display: block !important;
+}
+
+.main-container {
+  height: 80vh;
+  width: 90%;
+  background-color: #f5f6f8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-filter: drop-shadow(0px 0px 20px #242222);
+          filter: drop-shadow(0px 0px 20px #242222);
+  /* CALCULATOR INFO SECTION */
+  /* CALCULATOR SECTION */
+  /* CALORIES SECTION */
+}
+
+.main-container .calculator-info {
+  height: 100%;
+  width: 30%;
+  background-color: #f17420;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2rem;
+}
+
+.main-container .calculator-info h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  padding-bottom: 2rem;
+}
+
+.main-container .calculator-info p {
+  color: white;
+  font-size: 1.2rem;
+  padding-bottom: 2rem;
+}
+
+.main-container .calculator-info .wrapper {
+  width: 100%;
+  height: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.main-container .calculator-info .wrapper p {
+  color: white;
+  padding-left: 1rem;
+  font-size: 1rem;
+}
+
+.main-container .calculator-info .wrapper i {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+
+.main-container .calculator-info .wrapper .fa-drumstick-bite {
+  color: #8b4513;
+}
+
+.main-container .calculator-info .submit-btn {
+  display: block;
+  padding: 1.7rem 1.5rem;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.main-container .calculator-container {
+  height: 100%;
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f5f6f8;
+  z-index: 100;
+  -webkit-transition: -webkit-transform 0.7s ease-in-out;
+  transition: -webkit-transform 0.7s ease-in-out;
+  transition: transform 0.7s ease-in-out;
+  transition: transform 0.7s ease-in-out, -webkit-transform 0.7s ease-in-out;
+  position: relative;
+}
+
+.main-container .calculator-container .arrow-desktop {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  display: none;
+  cursor: pointer;
+}
+
+.main-container .calculator-container .arrow-mobile {
+  display: none;
+  cursor: pointer;
+}
+
+.main-container .calculator-container .calculator {
+  width: 80%;
+  height: 80%;
+}
+
+.main-container .calculator-container .calculator .calc-wrapper {
+  width: 100%;
+  height: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.main-container .calculator-container .calculator .calc-wrapper .input-wrapper {
+  height: 100%;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem;
+}
+
+.main-container .calculator-container .calculator .calc-wrapper .input-wrapper .age-input {
+  width: 100%;
+  height: 45%;
+  border: none;
+  padding: 0.2rem 0.5rem;
+  font-size: 1.2rem;
+  border: 1px solid #f1eded;
+}
+
+.main-container .calculator-container .calculator .calc-wrapper .input-wrapper .age-label {
+  padding-bottom: 0.5rem;
+  color: #5c5a5a;
+  font-size: 1.1rem;
+}
+
+.main-container .calculator-container .calculator .calc-wrapper .input-wrapper .gender-label {
+  padding-bottom: 0.5rem;
+  color: #5c5a5a;
+  font-size: 1.1rem;
+}
+
+.main-container .calculator-container .calculator .calc-wrapper .input-wrapper .gender-wrapper {
+  width: 100%;
+  height: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main-container .calculator-container .calculator .calc-wrapper .input-wrapper .gender-wrapper .gender-container {
+  display: block;
+  height: 100%;
+  width: 45%;
+  position: relative;
+  cursor: pointer;
+  z-index: 300;
+}
+
+.main-container .calculator-container .calculator .calc-wrapper .input-wrapper .gender-wrapper .gender-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.main-container .calculator-container .calculator .calc-wrapper .input-wrapper .gender-wrapper .gender-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+}
+
+.main-container .calculator-container .calculator .calc-wrapper .input-wrapper .gender-wrapper .gender-container input:checked ~ .checkmark {
+  background-color: #f17420;
+  color: white;
+}
+
+.main-container .calculator-container .calculator .calc-wrapper .input-wrapper .gender-wrapper .gender-container input:checked ~ .checkmark i {
+  display: block;
+}
+
+.main-container .calculator-container .calculator .calc-wrapper .input-wrapper .gender-wrapper .gender-container .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+  border: 1px solid #f1eded;
+}
+
+.main-container .calculator-container .calculator .calc-wrapper .input-wrapper .gender-wrapper .gender-container .checkmark i {
+  padding-left: 0.4rem;
+  display: none;
+  color: black;
+}
+
+.main-container .calculator-container .calculator .calc-wrapper .input-wrapper .weight-input {
+  width: 100%;
+  height: 45%;
+  border: none;
+  padding: 0.2rem 0.5rem;
+  font-size: 1.2rem;
+  border: 1px solid #f1eded;
+}
+
+.main-container .calculator-container .calculator .calc-wrapper .input-wrapper .weight-label {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 0.5rem;
+  color: #5c5a5a;
+  font-size: 1.1rem;
+}
+
+.main-container .calculator-container .calculator .calc-wrapper .input-wrapper .weight-label .unit {
+  color: #f17420;
+  font-weight: 700;
+}
+
+.main-container .calculator-container .calculator .calc-wrapper .input-wrapper .height-input {
+  width: 100%;
+  height: 45%;
+  border: none;
+  padding: 0.2rem 0.5rem;
+  font-size: 1.2rem;
+  border: 1px solid #f1eded;
+}
+
+.main-container .calculator-container .calculator .calc-wrapper .input-wrapper .height-label {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 0.5rem;
+  color: #5c5a5a;
+  font-size: 1.1rem;
+}
+
+.main-container .calculator-container .calculator .calc-wrapper .input-wrapper .height-label .unit {
+  color: #f17420;
+  font-weight: 700;
+}
+
+.main-container .calculator-container .calculator .calc-wrapper-activity {
+  width: 100%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.main-container .calculator-container .calculator .calc-wrapper-activity .input-wrapper {
+  height: 100%;
+  width: 50%;
+  padding: 1rem;
+}
+
+.main-container .calculator-container .calculator .calc-wrapper-activity .input-wrapper .activity-label {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 0.5rem;
+  color: #5c5a5a;
+  font-size: 1.1rem;
+}
+
+.main-container .calculator-container .calculator .calc-wrapper-activity .input-wrapper .activity-label i {
+  color: #f17420;
+}
+
+.main-container .calculator-container .calculator .calc-wrapper-activity .input-wrapper .activity-wrapper {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-container .calculator-container .calculator .calc-wrapper-activity .input-wrapper .activity-wrapper .activity-container {
+  display: block;
+  height: 20%;
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+  z-index: 300;
+  margin: 0.15rem 0;
+}
+
+.main-container .calculator-container .calculator .calc-wrapper-activity .input-wrapper .activity-wrapper .activity-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.main-container .calculator-container .calculator .calc-wrapper-activity .input-wrapper .activity-wrapper .activity-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+}
+
+.main-container .calculator-container .calculator .calc-wrapper-activity .input-wrapper .activity-wrapper .activity-container input:checked ~ .checkmark {
+  background-color: #f17420;
+  color: white;
+}
+
+.main-container .calculator-container .calculator .calc-wrapper-activity .input-wrapper .activity-wrapper .activity-container input:checked ~ .checkmark i {
+  display: block;
+}
+
+.main-container .calculator-container .calculator .calc-wrapper-activity .input-wrapper .activity-wrapper .activity-container .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+  border: 1px solid #f1eded;
+  padding-left: 0.5rem;
+}
+
+.main-container .calculator-container .calculator .calc-wrapper-activity .input-wrapper .activity-wrapper .activity-container .checkmark i {
+  padding-left: 0.4rem;
+  display: none;
+  color: black;
+}
+
+.main-container .calculator-container .calculator .calc-wrapper-activity .btn-container {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-container .calculator-container .calculator .calc-wrapper-activity .btn-container .submit-btn {
+  display: block;
+  padding: 1.7rem 3rem;
+  background-color: #f17420;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.main-container .calories-container {
+  height: 100%;
+  width: 30%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #f17420;
+  padding: 2rem;
+}
+
+.main-container .calories-container h1 {
+  font-size: 1.4rem;
+  color: white;
+  padding-bottom: 2.2rem;
+}
+
+.main-container .calories-container h2 {
+  font-size: 3rem;
+  padding-bottom: 0.7rem;
+  font-weight: 700;
+}
+
+.main-container .calories-container p {
+  color: white;
+  font-size: 1.1rem;
+  padding-bottom: 2rem;
+}
+
+.main-container .calories-container strong {
+  color: black;
+}
+
+.main-container .macro-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid black;
+  margin-bottom: 2rem;
+  padding: 0.3rem;
+  background-color: #f18238;
+}
+
+.main-container .macro-wrapper h3 {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.main-container .macro-wrapper span {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* MEDIA SECTION */
+@media (max-width: 1200px) and (min-width: 1100px) {
+  body,
+  html {
+    font-size: 14px;
+  }
+}
+
+/* IPAD SECTION */
+@media (max-width: 1099px) and (min-width: 768px) {
+  body,
+  html {
+    font-size: 11px;
+  }
+  .main-container .calculator-container .calculator {
+    width: 90%;
+  }
+}
+
+/* MOBILE SECTION */
+@media (max-width: 850px) {
+  body {
+    height: 250vh;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body,
+  html {
+    font-size: 14px;
+  }
+  .main-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 90%;
+  }
+  .main-container .calculator-info {
+    width: 100%;
+    height: 30%;
+    text-align: center;
+  }
+  .main-container .calculator-info .wrapper {
+    height: 10%;
+    margin: 1rem 0;
+    text-align: left;
+  }
+  .main-container .calculator-container {
+    width: 100%;
+    height: 70%;
+  }
+  .main-container .calculator-container .arrow-desktop {
+    display: none;
+  }
+  .main-container .calculator-container .arrow-mobile {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+  }
+  .main-container .calculator-container .calculator {
+    width: 100%;
+    height: 100%;
+  }
+  .main-container .calculator-container .calculator .calc-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main-container .calculator-container .calculator .calc-wrapper .input-wrapper {
+    width: 100%;
+  }
+  .main-container .calculator-container .calculator .calc-wrapper-activity {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+  }
+  .main-container .calculator-container .calculator .calc-wrapper-activity .input-wrapper {
+    width: 100%;
+  }
+  .main-container .calculator-container .calculator .calc-wrapper-activity .btn-container {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .main-container .calories-container {
+    width: 100%;
+    height: 30%;
+    top: 70%;
+  }
+}
+
+/* LANDSCAPE ORIENTATION SECTION */
+@media (max-width: 850px) and (orientation: landscape) {
+  body {
+    height: 400vh;
+  }
+}
+
+@media (min-width: 851px) and (max-width: 1000px) and (orientation: landscape) {
+  body {
+    height: 120vh;
+  }
+  .main-container {
+    height: 110vh;
+  }
+}
+/*# sourceMappingURL=style.css.map */

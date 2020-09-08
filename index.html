@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <title>Calorie Calculator</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="calculator-info">
+        <h1 class="main-title">Calorie Calculator</h1>
+        <p class="main-paragraph">Calucalte how many calories do you need</p>
+        <div class="wrapper">
+          <i class="fas fa-list"></i>
+          <p class="wrapper-paragraph">
+            Enter your gender, weight, height and age
+          </p>
+        </div>
+
+        <div class="wrapper">
+          <i class="fas fa-dumbbell"></i>
+          <p class="wrapper-paragraph">Select your activity level</p>
+        </div>
+
+        <div class="wrapper">
+          <i class="fas fa-drumstick-bite"></i>
+          <p class="wrapper-paragraph">Find out what is your caloric demand</p>
+        </div>
+      </div>
+
+      <div class="calculator-container">
+        <i class="fas fa-arrow-left arrow-desktop"></i>
+        <i class="fas fa-chevron-down arrow-mobile"></i>
+        <div class="calculator">
+          <div class="calc-wrapper">
+            <div class="input-wrapper">
+              <label for="age" class="age-label">Age</label>
+              <input type="text" class="age-input" />
+            </div>
+
+            <div class="input-wrapper">
+              <label for="gender" class="gender-label">Gender</label>
+              <div class="gender-wrapper">
+                <label for="" class="gender-container">
+                  <input type="radio" name="gender" class="gender-input" value="-161"/>
+                  <span class="checkmark"
+                    >Female <i class="fas fa-check"></i
+                  ></span>
+                </label>
+
+                <label for="" class="gender-container">
+                  <input type="radio" name="gender" class="gender-input" value="5"
+                  checked/>
+                  <span class="checkmark"
+                    >Male <i class="fas fa-check"></i
+                  ></span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="calc-wrapper">
+            <div class="input-wrapper">
+              <label for="age" class="weight-label">
+                <span>Weight</span>
+                <span class="unit">kg</span>
+              </label>
+              <input type="text" class="weight-input" />
+            </div>
+            <div class="input-wrapper">
+              <label for="age" class="height-label">
+                <span>Height</span>
+                <span class="unit">cm</span>
+              </label>
+              <input type="text" class="height-input" />
+            </div>
+          </div>
+
+          <div class="calc-wrapper-activity">
+            <div class="input-wrapper">
+              <label for="activity" class="activity-label">
+                <span>Activity Level</span> <i class="fas fa-dumbbell"></i>
+              </label>
+
+              <div class="activity-wrapper">
+                <label for="acivity" class="activity-container">
+                  <input
+                  type="radio"
+                  name="activity"
+                  class="activity-input"
+                  value="1.3"
+                  />
+                  <span class="checkmark">
+                    Serdentary
+                    <i class="fas fa-check"></i>
+                  </span>
+                </label>
+
+                <label for="acivity" class="activity-container">
+                  <input
+                  type="radio"
+                  name="activity"
+                  class="activity-input"
+                  value="1.5"
+                  />
+
+                  <span class="checkmark">
+                    Light Active
+                    <i class="fas fa-check"></i>
+                  </span>
+                </label>
+
+                <label for="acivity" class="activity-container">
+                  <input
+                  type="radio"
+                  name="activity"
+                  class="activity-input"
+                  value="1.7"
+                  checked
+                  />
+                  <span class="checkmark">
+                    Active
+                    <i class="fas fa-check"></i>
+                  </span>
+                </label>
+
+                <label for="acivity" class="activity-container">
+                  <input
+                  type="radio"
+                  name="activity"
+                  class="activity-input"
+                  value="1.9"
+                  />
+                  <span class="checkmark">
+                    Very Active
+                    <i class="fas fa-check"></i>
+                  </span>
+                </label>
+              </div>
+            </div>
+
+            <div class="btn-container">
+              <a class="submit-btn">Calculate</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div class="calories-container">
+      <h1 class="calories-title">Your result</h1>
+      <h2 class="calories-result"></h2>
+      <p class="calories-paragraph">
+        Suggested amount of calories <strong>per day.</strong>
+      </p>
+
+      <div class="macro-wrapper">
+        <h3 class="protein-title">Protein</h3>
+        <span class="protein-number"></span>
+      </div>
+
+      <div class="macro-wrapper">
+        <h3 class="fat-title">Fat</h3>
+        <span class="fat-number"></span>
+      </div>
+
+      <div class="macro-wrapper">
+        <h3 class="carbs-title">Carbohydrates</h3>
+        <span class="carbs-number"></span>
+      </div>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
